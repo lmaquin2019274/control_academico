@@ -1,0 +1,8 @@
+#miTabla {border:1px solid #ddd;padding: 10px;}
+#miTabla thead tr td {font-weight:bold;padding:10px;}
+#miTabla tbody tr:nth-child(odd) {background-color:#f8f8f8;}
+#miTabla tr {}
+#miTabla td {padding:5px;}
+ 
+form {width:300px;text-align:center;}
+form label {display:inline-block;width:100px;text-align:right;}
