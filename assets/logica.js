@@ -1,16 +1,10 @@
 var count=0;
  
-	/**
-	 * función para agregar valores a la tabla
-	 */
 	function agregarValores(){
-		// cogemos los valores del formulario
 		var nombre=document.getElementById("nombre").value;
-		var apellidos=document.getElementById("apellidos").value;
+		var apellidos=document.getElementById("telefono").value;
 		var correo=document.getElementById("correo").value;
  
-		// La variable cont, genera un id unico para cada contacto
-		// Este id es el utilizado para eliminar-lo
 		count++;
  
 		if(nombre.length>0 || apellidos.length>0)
@@ -38,25 +32,16 @@ var count=0;
 			tbody.appendChild(row);
 		}
  
-		// Eliminamos los valores del formulario
 		document.getElementById("nombre").value="";
-		document.getElementById("apellidos").value="";
+		document.getElementById("telefono").value="";
 		document.getElementById("correo").value="";
 	}
- 
-	/**
-	 * Función para eliminar un valor de la tabla
-	 */
 	function eliminarValor(id)
 	{
 		var row = document.getElementById(id);
 		row.parentNode.removeChild(row);
 	}
  
-	/**
-	 * Función que crea el boton de eliminar
-	 * Tiene que recibie el id a eliminar
-	 */
 	function crearButton(id)
 	{
 		var button=document.createElement("input");

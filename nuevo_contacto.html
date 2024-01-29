@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tus contactos</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    
+    <img src="./assets/img/contactos.jpg" alt="logo">
+
+    <p>
+        <form>
+            <label>Nombre:</label> <input type="text" id="nombre" class="txt">
+            <label>Teléfono:</label> <input type="text" id="telefono" class="txt">
+            <label>Correo:</label> <input type="text" id="correo" class="txt">
+            <p>
+                <input class="btn" type="button" onclick="agregarValores();" value="Agregar contacto">
+            </p>
+        </form>
+    </p>
+
+    <table id="miTabla" class="miTabla">
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Teléfono</td>
+                <td>Correo</td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+     
+    </body>
+    <script src="./assets/logica.js"></script>
+</html>
