@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tus contactos</title>
     <link rel="stylesheet" href="./assets/styles.css">
 </head>
-<body>
-    
-    <img src="./assets/img/contactos.jpg" alt="logo">
 
-    <p>
+<body>
+
+    <header>
+        <h1>Agregar contacto</h1>
+        <input type="button" class="btn" value="volver" href="contacto.html">
+    </header>
+
+    <br><br><br><br><br><br>
+
+    <div class="container">
+        <img src="./assets/img/contactos.jpg" alt="logo">
+
+        <p>
         <form>
             <label>Nombre:</label> <input type="text" id="nombre" class="txt">
             <label>Teléfono:</label> <input type="text" id="telefono" class="txt">
@@ -19,50 +29,66 @@
                 <input class="btn" type="button" onclick="agregarValores();" value="Agregar contacto">
             </p>
         </form>
-    </p>
+        </p>
 
-    <table id="miTabla" class="miTabla">
-        <thead>
-            <tr>
-                <td>Nombre</td>
-                <td>Teléfono</td>
-                <td>Correo</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Marroquin</td>
-                <td>555-1234</td>
-                <td>maarroquin@email.com</td>
-                <td><input type="button" value="Eliminar" id="1"></td>
-            </tr>
-            <tr>
-                <td>Suyen</td>
-                <td>555-5678</td>
-                <td>suyen@gmail.com</td>
-                <td><input type="button" value="Eliminar" id="2"></td>
-            </tr>
-            <tr>
-                <td>Vaquin</td>
-                <td>555-9374</td>
-                <td>vaquin@gmail.com</td>
-                <td><input type="button" value="Eliminar" id="3"></td>
-            </tr>
-            <tr>
-                <td>Maquin</td>
-                <td>555-1287</td>
-                <td>maquin@hotmail.com</td>
-                <td><input type="button" value="Eliminar" id="4"></td>
-            </tr>
-            <tr>
-                <td>Braulio</td>
-                <td>555-7382</td>
-                <td>braulio@yahoo.com</td>
-                <td><input type="button" value="Eliminar" id="5"></td>
-            </tr>
-        </tbody>
-    </table>
-     
-    </body>
-    <script src="./assets/logica.js"></script>
+        <table id="miTabla" class="miTabla">
+            <thead>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Teléfono</td>
+                    <td>Correo</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Marroquin</td>
+                    <td>555-1234</td>
+                    <td>maarroquin@email.com</td>
+                </tr>
+                <tr>
+                    <td>Suyen</td>
+                    <td>555-5678</td>
+                    <td>suyen@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Vaquin</td>
+                    <td>555-9374</td>
+                    <td>vaquin@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Maquin</td>
+                    <td>555-1287</td>
+                    <td>maquin@hotmail.com</td>
+                </tr>
+                <tr>
+                    <td>Braulio</td>
+                    <td>555-7382</td>
+                    <td>braulio@yahoo.com</td>
+                </tr>
+                <tr>
+                    <td>Mario</td>
+                    <td>555-0239</td>
+                    <td>mario@email.com</td>
+                </tr>
+                <tr>
+                    <td>Diego</td>
+                    <td>555-2384</td>
+                    <td>diego@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Luis</td>
+                    <td>555-9823</td>
+                    <td>luis@hotmail.com</td>
+                </tr>
+                <tr>
+                    <td>Luciano</td>
+                    <td>555-8242</td>
+                    <td>luciano@yahoo.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="./assets/logica.js"></script>
+
 </html>
