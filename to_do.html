@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/style_to_do.css">
+  <title>ToDo List</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>ToDo List</h1>
+    <button class="btn"><a href="contactos.html">volver</a></button>
+  </header>
+
+  <div class="container">
+    <input type="text" id="taskInput" placeholder="Nueva tarea...">
+    <button class="btn" onclick="addTask()">Agregar</button>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="./assets/logica_to_do.js"></script>
+</body>
+
+</html>
