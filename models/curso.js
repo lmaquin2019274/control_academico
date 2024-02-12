@@ -14,6 +14,10 @@ const CursoSchema = Schema ({
     estado:{
         type: Boolean,
         default: true
+    },
+    correo_maestro:{
+        type: String,
+        required: [true, 'Correo obligatorio']
     }
 });
 

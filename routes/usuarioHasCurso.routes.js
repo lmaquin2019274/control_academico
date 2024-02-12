@@ -1,14 +1,14 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
 
-const { validarCampos, validarRolTeacher } = require('../middlewares/validar-campos');
+const { validarCampos } = require('../middlewares/validar-campos');
 const { existeCursoById} = require('../helpers/db-validators');
 
-const { cursosPost, cursosGet, getCursoByid, cursosPut, cursosDelete } = require('../controllers/cursos.controller');
+const { usuarioHasCursoPost, usuarioHasCursoGet, getUsuarioHasCursoByid, usuarioHasCursoPut, usuarioHasCursoDelete } = require('../controllers/usuarioHasCurso.controller');
 
 const router = Router();
 
-router.get("/", cursosGet);
+router.get("/", usuarioHasCursoGet);
 
 router.get(
     "/:id",
@@ -16,25 +16,23 @@ router.get(
         check("id","El id no es un formato válido de MongoDB").isMongoId(),
         check("id").custom(existeCursoById),
         validarCampos
-    ], getCursoByid);
+    ], getUsuarioHasCursoByid);
 
 router.put(
     "/:id",
     [
         check("id","El id no es un formato válido de MongoDB").isMongoId(),
         check("id").custom(existeCursoById),
-        validarCampos,
-        validarRolTeacher
-    ], cursosPut);
+        validarCampos
+    ], usuarioHasCursoPut);
 
 router.delete(
         "/:id",
         [
             check("id","El id no es un formato válido de MongoDB").isMongoId(),
             check("id").custom(existeCursoById),
-            validarCampos,
-            validarRolTeacher
-        ], cursosDelete);
+            validarCampos
+        ], usuarioHasCursoDelete);
 
         
 router.post(
@@ -42,7 +40,6 @@ router.post(
     [
         check("nombre","El nombre es obligatorio").not().isEmpty(),
         validarCampos,
-        validarRolTeacher
-    ], cursosPost); 
+    ], usuarioHasCursoPost); 
 
 module.exports = router;
