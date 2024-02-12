@@ -30,7 +30,7 @@ const getUsuarioByid = async (req, res) => {
 
 const usuariosPut = async (req, res) => {
     const { id } = req.params;
-    const { _id, password, google, correo, ...resto} = req.body;
+    const { _id, password, correo, ...resto} = req.body;
 
     const usuario = await Usuario.findByIdAndUpdate(id, resto);
 
