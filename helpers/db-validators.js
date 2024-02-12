@@ -1,4 +1,4 @@
-const Usuario = require('../models/curso');
+const Curso = require('../models/curso');
 
 const existeCursoById = async ( id = '') => {
     const existeCurso = await Curso.findOne({id});
