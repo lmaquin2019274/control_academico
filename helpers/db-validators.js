@@ -16,5 +16,5 @@ const existeElementoById = async ( id = '') => {
 
 module.exports = {
     existenteEmail,
-    existeUsuarioById
+    existeElementoById
 }
