@@ -7,7 +7,7 @@ const existenteEmail = async (correo = '') => {
     }
 }
 
-const existeUsuarioById = async ( id = '') => {
+const existeElementoById = async ( id = '') => {
     const existeUsuario = await Usuario.findOne({id});
     if(existeUsuario){
         throw new Error(`El usuario con el id: ${ id } no existe`);
