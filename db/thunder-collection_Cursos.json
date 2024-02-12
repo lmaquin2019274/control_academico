@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Cursos",
+    "dateExported": "2024-02-12T17:52:12.002Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "355068b8-31c0-4e94-bc1e-2c263aeae443",
+            "colId": "6444d4b8-1a38-45ce-b067-8f9fdecab983",
+            "containerId": "",
+            "name": "cursosGet",
+            "url": "http://localhost:1234/api/cursos",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-12T17:22:15.569Z",
+            "modified": "2024-02-12T17:24:44.361Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "672ab577-e172-4521-8e5e-c23503261f80",
+            "colId": "6444d4b8-1a38-45ce-b067-8f9fdecab983",
+            "containerId": "",
+            "name": "cursosPost",
+            "url": "http://localhost:1234/api/cursos",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-12T17:48:51.043Z",
+            "modified": "2024-02-12T17:50:01.708Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Mate\",\n  \"categoria\":\"calculo\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bc8ee9c7-46da-49df-af3b-436c72ae50c6",
+            "colId": "6444d4b8-1a38-45ce-b067-8f9fdecab983",
+            "containerId": "",
+            "name": "getCursosById",
+            "url": "http://localhost:1234/api/cursos/65ca51d1cb0db77a60f412a2",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-12T17:50:21.870Z",
+            "modified": "2024-02-12T17:50:42.776Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d9edd13e-04a6-4055-85df-37975787a485",
+            "colId": "6444d4b8-1a38-45ce-b067-8f9fdecab983",
+            "containerId": "",
+            "name": "cursosPut",
+            "url": "http://localhost:1234/api/cursos/65ca51d1cb0db77a60f412a2",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-02-12T17:50:51.965Z",
+            "modified": "2024-02-12T17:51:30.775Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Matematica\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7de2c569-2027-4a89-be04-04a87a5ff423",
+            "colId": "6444d4b8-1a38-45ce-b067-8f9fdecab983",
+            "containerId": "",
+            "name": "cursoDelete",
+            "url": "http://localhost:1234/api/cursos/65ca51d1cb0db77a60f412a2",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-02-12T17:51:46.452Z",
+            "modified": "2024-02-12T17:52:04.222Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
