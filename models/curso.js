@@ -5,19 +5,11 @@ const UsuarioSchema = Schema ({
         type: String,
         required: [true, 'Nombre obligatorio']
     },
-    correo: {
-        type: String,
-        required: [true, 'Correo obligatorio']
-    },
-    password: {
-        type: String,
-        required: [true, 'Password obligatorio']
-    },
-    role:{
+    categoria: {
         type: String,
         required: true,
-        enum: ["STUDENT_ROLE", "TEACHER_ROLE"],
-        default: "STUDENT_ROLE"
+        enum: ["ciencias", "humanidades", "tecnologia", "calculo", "indefinido"],
+        default: "indefinido"
     },
     estado:{
         type: Boolean,

@@ -2,37 +2,37 @@ const { Router } = require('express');
 const { check } = require('express-validator');
 
 const { validarCampos } = require('../middlewares/validar-campos');
-const { existenteEmail, existeUsuarioById} = require('../helpers/db-validators');
+const { existeCursoById} = require('../helpers/db-validators');
 
-const { usuariosPost, usuariosGet, getUsuarioByid, usuariosPut, usuariosDelete, usuariosLogin } = require('../controllers/user.controller');
+const { cursosPost, cursosGet, getCursoByid, cursosPut, cursosDelete } = require('../controllers/curso.controller');
 
 const router = Router();
 
-router.get("/", usuariosGet);
+router.get("/", cursosGet);
 
 router.get(
     "/:id",
     [
         check("id","El id no es un formato válido de MongoDB").isMongoId(),
-        check("id").custom(existeUsuarioById),
+        check("id").custom(existeCursoById),
         validarCampos
-    ], getUsuarioByid);
+    ], getCursoByid);
 
 router.put(
     "/:id",
     [
         check("id","El id no es un formato válido de MongoDB").isMongoId(),
-        check("id").custom(existeUsuarioById),
+        check("id").custom(existeCursoById),
         validarCampos
-    ], usuariosPut);
+    ], cursosPut);
 
 router.delete(
         "/:id",
         [
             check("id","El id no es un formato válido de MongoDB").isMongoId(),
-            check("id").custom(existeUsuarioById),
+            check("id").custom(existeCursoById),
             validarCampos
-        ], usuariosDelete);
+        ], cursosDelete);
 
         
 router.post(
@@ -43,8 +43,6 @@ router.post(
         check("correo","El correo debe ser un correo").isEmail(),
         check("correo").custom(existenteEmail),
         validarCampos,
-    ], usuariosPost); 
-
-    router.patch( "/", usuariosLogin );
+    ], cursosPost); 
 
 module.exports = router;
