@@ -38,7 +38,8 @@ router.delete(
 router.post(
     "/", 
     [
-        check("nombre","El nombre es obligatorio").not().isEmpty(),
+        check("estudiante","El estudiante es obligatorio").not().isEmpty(),
+        check("curso","El curso es obligatorio").not().isEmpty(),
         validarCampos,
     ], usuarioHasCursoPost); 
 

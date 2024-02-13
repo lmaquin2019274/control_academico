@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Cursos",
-    "dateExported": "2024-02-12T23:06:58.286Z",
+    "dateExported": "2024-02-13T02:39:29.847Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -10,11 +10,11 @@
             "colId": "054396db-cd97-4823-96d9-fcd6eaa61201",
             "containerId": "",
             "name": "cursosGet",
-            "url": "http://localhost:1234/api/cursos",
+            "url": "http://localhost:3000/api/cursos",
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-02-12T22:40:54.518Z",
-            "modified": "2024-02-12T22:40:54.518Z",
+            "modified": "2024-02-13T02:35:48.701Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -24,16 +24,16 @@
             "colId": "054396db-cd97-4823-96d9-fcd6eaa61201",
             "containerId": "",
             "name": "cursosPost",
-            "url": "http://localhost:1234/api/cursos",
+            "url": "http://localhost:3000/api/cursos",
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-02-12T22:40:54.520Z",
-            "modified": "2024-02-12T22:41:34.188Z",
+            "modified": "2024-02-13T02:39:21.713Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\":\"Mate\",\n  \"categoria\":\"calculo\",\n  \"email\":\"teacher@email.com\"\n}",
+                "raw": "{\n  \"nombre\":\"Psicología\",\n  \"categoria\":\"humanidades\",\n  \"maestro\":\"65cac4a93f69f860c25d361e\"\n}",
                 "form": []
             },
             "tests": []
@@ -43,11 +43,11 @@
             "colId": "054396db-cd97-4823-96d9-fcd6eaa61201",
             "containerId": "",
             "name": "getCursosById",
-            "url": "http://localhost:1234/api/cursos/65ca51d1cb0db77a60f412a2",
+            "url": "http://localhost:3000/api/cursos/65cac931b8b6faca45e9fdb8",
             "method": "GET",
             "sortNum": 40000,
             "created": "2024-02-12T22:40:54.521Z",
-            "modified": "2024-02-12T22:40:54.521Z",
+            "modified": "2024-02-13T02:36:14.337Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -57,16 +57,16 @@
             "colId": "054396db-cd97-4823-96d9-fcd6eaa61201",
             "containerId": "",
             "name": "cursosPut",
-            "url": "http://localhost:1234/api/cursos/65ca51d1cb0db77a60f412a2",
+            "url": "http://localhost:3000/api/cursos/65cac931b8b6faca45e9fdb8",
             "method": "PUT",
             "sortNum": 50000,
             "created": "2024-02-12T22:40:54.522Z",
-            "modified": "2024-02-12T22:40:54.522Z",
+            "modified": "2024-02-13T02:39:11.218Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\":\"Matematica\"\n}",
+                "raw": "{\n  \"nombre\":\"Matematica\",\n  \"maestro\":\"65cac4a93f69f860c25d361e\"\n}",
                 "form": []
             },
             "tests": []
@@ -76,13 +76,18 @@
             "colId": "054396db-cd97-4823-96d9-fcd6eaa61201",
             "containerId": "",
             "name": "cursoDelete",
-            "url": "http://localhost:1234/api/cursos/65ca51d1cb0db77a60f412a2",
+            "url": "http://localhost:3000/api/cursos/65cac4a93f69f860c25d361e",
             "method": "DELETE",
             "sortNum": 60000,
             "created": "2024-02-12T22:40:54.523Z",
-            "modified": "2024-02-12T22:40:54.523Z",
+            "modified": "2024-02-13T02:38:04.501Z",
             "headers": [],
             "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"maestro\":\"65cac4a93f69f860c25d361e\"\n}",
+                "form": []
+            },
             "tests": []
         }
     ]

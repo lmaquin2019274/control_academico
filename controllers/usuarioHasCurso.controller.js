@@ -47,15 +47,33 @@ const usuarioHasCursoDelete = async (req, res) => {
     });
 }
 
-const usuarioHasCursoPost = async (req, res) =>{
-    const { nombre, categoria } = req.body;
-    const usuarioHasCursos = new usuarioHasCurso({usuario, curso});
+const usuarioHasCursoPost = async (req, res) => {
+    const { estudiante, curso } = req.body;
+    const Usuario = require ('../models/usuario');
+    const Curso = require ('../models/curso');
 
-    await curso.save();
-    res.status(200).json({
-        usuarioHasCursos
+    const [estudiantes, cursos] = await Promise.all([
+        Usuario.findById(estudiante).select('nombre'),
+        Curso.findById(curso).select('nombre')
+    ]);
+
+    const usuarioHasCursos = new usuarioHasCurso({
+        estudiante: estudiante,
+        curso: curso
     });
-}
+
+    await usuarioHasCursos.save();
+
+    res.status(200).json({
+        id_estudiante: estudiante,
+        estudiante: estudiantes.nombre,
+        id_curso: curso,
+        curso: cursos.nombre,
+        fecha_inscripcion: usuarioHasCursos.fecha_inscripcion
+    });
+};
+
+
 
 module.exports = {
     usuarioHasCursoDelete,

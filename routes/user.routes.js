@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
 
-const { validarCampos, validarRolUsuario } = require('../middlewares/validar-campos');
+const { validarCampos } = require('../middlewares/validar-campos');
 const { existenteEmail, existeUsuarioById} = require('../helpers/db-validators');
 
 const { usuariosPost, usuariosGet, getUsuarioByid, usuariosPut, usuariosDelete, usuariosLogin } = require('../controllers/user.controller');
@@ -43,7 +43,6 @@ router.post(
         check("correo","El correo debe ser un correo").isEmail(),
         check("correo").custom(existenteEmail),
         validarCampos,
-        validarRolUsuario,
     ], usuariosPost); 
 
 router.post("/login", usuariosLogin);
