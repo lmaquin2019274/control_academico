@@ -15,9 +15,9 @@ const CursoSchema = Schema ({
         type: Boolean,
         default: true
     },
-    correo_maestro:{
+    maestro:{
         type: String,
-        required: [true, 'Correo obligatorio']
+        required: [true, 'Id obligatorio']
     }
 });
 

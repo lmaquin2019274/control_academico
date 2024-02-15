@@ -1,4 +1,6 @@
 const { validationResult } = require('express-validator');
+const mongoose = require('mongoose');
+const Usuario = require('../models/usuario')
 
 const validarCampos = (req, res, next) => {
     const error = validationResult(req);
@@ -9,32 +11,35 @@ const validarCampos = (req, res, next) => {
     next();
 }
 
-const validarRolUsuario = (req, res, next) => {
-    const { role } = req.body;
-    if (role !== "STUDENT_ROLE" && role !== "TEACHER_ROLE" && role !== null) {
-        return res.status(400).json({
-            msg: 'El rol del usuario debe ser STUDENT_ROLE o TEACHER_ROLE'
+const validarRolTeacher = async (req, res, next) => {
+    const { maestro } = req.body;
+
+    try {
+        const existeUsuario = await Usuario.findById(maestro);
+
+        if (!existeUsuario) {
+            return res.status(400).json({
+                msg: 'El ID del usuario proporcionado no existe'
+            });
+        }
+
+        if (existeUsuario.role === "TEACHER_ROLE") {
+            req.body.role = "TEACHER_ROLE";
+            next();
+        } else {
+            return res.status(400).json({
+                msg: 'Un estudiante no puede crear cursos'
+            });
+        }
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({
+            msg: 'Error interno del servidor'
         });
     }
-    next();
 };
-
-
-const validarRolTeacher = (req, res, next) => {
-    const usuario = req.usuario;
-
-    if (!usuario || usuario.role !== "TEACHER_ROLE") {
-        return res.status(403).json({
-            msg: 'Eres un estudiante, no puedes realizar esta acción'
-        });
-    }
-    
-    next();
-};
-
 
 module.exports = {
     validarCampos,
-    validarRolUsuario,
     validarRolTeacher
 }

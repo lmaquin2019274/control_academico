@@ -1,10 +1,10 @@
 const { Schema, model, Types } = require('mongoose');
 
 const UsuarioHasCursoSchema = Schema ({
-    usuario: {
+    estudiante: {
         type: Types.ObjectId,
         ref: 'Usuario',
-        required: [true, 'Usuario obligatorio']
+        required: [true, 'Estudiante obligatorio']
     },
     curso: {
         type: Types.ObjectId,
