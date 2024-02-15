@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Cursos",
-    "dateExported": "2024-02-13T02:39:29.847Z",
+    "dateExported": "2024-02-15T22:40:52.232Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -28,12 +28,12 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-02-12T22:40:54.520Z",
-            "modified": "2024-02-13T02:39:21.713Z",
+            "modified": "2024-02-15T22:16:52.408Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\":\"Psicología\",\n  \"categoria\":\"humanidades\",\n  \"maestro\":\"65cac4a93f69f860c25d361e\"\n}",
+                "raw": "{\n  \"nombre\":\"Quimica\",\n  \"categoria\":\"ciencias\",\n  \"maestro\":\"maestro@email.com\"\n}",
                 "form": []
             },
             "tests": []
@@ -76,16 +76,16 @@
             "colId": "054396db-cd97-4823-96d9-fcd6eaa61201",
             "containerId": "",
             "name": "cursoDelete",
-            "url": "http://localhost:3000/api/cursos/65cac4a93f69f860c25d361e",
+            "url": "http://localhost:3000/api/cursos/65ce8b913d155418f37fcdd3",
             "method": "DELETE",
             "sortNum": 60000,
             "created": "2024-02-12T22:40:54.523Z",
-            "modified": "2024-02-13T02:38:04.501Z",
+            "modified": "2024-02-15T22:35:39.471Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"maestro\":\"65cac4a93f69f860c25d361e\"\n}",
+                "raw": "{\n  \"maestro\":\"65ce727d087bd357d67c79b0\"\n}",
                 "form": []
             },
             "tests": []

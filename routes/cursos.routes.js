@@ -2,7 +2,7 @@ const { Router } = require('express');
 const { check } = require('express-validator');
 
 const { validarCampos, validarRolTeacher } = require('../middlewares/validar-campos');
-const { existeCursoById} = require('../helpers/db-validators');
+const { existeCursoById, existeCursoByNombre} = require('../helpers/db-validators');
 
 const { cursosPost, cursosGet, getCursoByid, cursosPut, cursosDelete } = require('../controllers/cursos.controller');
 
@@ -41,8 +41,9 @@ router.post(
     "/", 
     [
         check("nombre","El nombre es obligatorio").not().isEmpty(),
-        validarCampos,
-        validarRolTeacher
+        check("nombre").custom(existeCursoByNombre),
+        check("maestro","Debes escribir tu correo, no tu usuario").isEmail(),
+        validarCampos
     ], cursosPost); 
 
 module.exports = router;

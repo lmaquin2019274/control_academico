@@ -8,6 +8,13 @@ const existenteEmail = async (correo = '') => {
     }
 }
 
+const noExistenteEmail = async (correo = '') => {
+    const existeEmail = await Usuario.findOne({correo});
+    if(!existeEmail){
+        throw new Error(`El email ${ correo } no existe`);
+    }
+}
+
 const existeUsuarioById = async ( id = '') => {
     const existeUsuario = await Usuario.findOne({id});
     if(existeUsuario){
@@ -22,8 +29,17 @@ const existeCursoById = async ( id = '') => {
     }
 }
 
+const existeCursoByNombre = async ( nombre = '') => {
+    const existeCurso = await Curso.findOne({nombre});
+    if(existeCurso){
+        throw new Error(`El curso con el nombre: ${ nombre } ya existe`);
+    }
+}
+
 module.exports = {
     existenteEmail,
     existeUsuarioById,
-    existeCursoById
+    existeCursoById,
+    noExistenteEmail,
+    existeCursoByNombre
 }

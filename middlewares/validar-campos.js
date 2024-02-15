@@ -28,7 +28,7 @@ const validarRolTeacher = async (req, res, next) => {
             next();
         } else {
             return res.status(400).json({
-                msg: 'Un estudiante no puede crear cursos'
+                msg: 'Un estudiante no puede modificar cursos o eliminarlos'
             });
         }
     } catch (error) {

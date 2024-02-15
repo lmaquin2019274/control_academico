@@ -17,7 +17,7 @@ const CursoSchema = Schema ({
     },
     maestro:{
         type: String,
-        required: [true, 'Id obligatorio']
+        required: [true, 'Maestro obligatorio']
     }
 });
 

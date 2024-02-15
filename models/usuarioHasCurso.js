@@ -14,6 +14,10 @@ const UsuarioHasCursoSchema = Schema ({
     fecha_inscripcion:{
         type: Date,
         default: Date.now()
+    },
+    estado:{
+        type: Boolean,
+        default: true
     }
 });
 
