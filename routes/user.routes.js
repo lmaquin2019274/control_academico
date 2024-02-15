@@ -45,6 +45,10 @@ router.post(
         validarCampos,
     ], usuariosPost); 
 
-router.post("/login", usuariosLogin);
+router.post("/login"
+        check('correo', 'Este correo no sirve').isEmail(),
+        check('password', 'la password es necesaria').not(isEmpty()),
+    validarCampos, 
+    usuariosLogin);
 
 module.exports = router;
