@@ -64,6 +64,14 @@ const usuarioHasCursoPost = async (req, res) => {
     const estudiante = Estudiante.id;
 
     const Cursoo = await Curso.findOne({ nombre: materia });
+
+    if(!Cursoo){
+        return res.status(400).json({
+            msg:
+                'El curso que se quiere asignar no existe'
+        });
+    }
+    
     const curso = Cursoo.id;
 
 
