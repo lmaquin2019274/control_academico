@@ -19,7 +19,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\":\"maestro\",\n  \"correo\":\"maestro@email.com\",\n  \"password\":\"123456\",\n  \"role\":\"TEACHER_ROLE\"\n}",
+                "raw": "{\n  \"nombre\":\"maestro\",\n  \"correo\":\"maestro@email.com\",\n  \"password\":\"123456\",\n  \"role\":\"TEACHER_ROLE\"\n  \\para asignar un estudiante solo se quita el atributo role}",
                 "form": []
             },
             "tests": []
